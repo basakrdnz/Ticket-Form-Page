@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ruthie&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruthie&display=swap");
+    /* Custom CSS to remove number input arrows */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./second.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <img
+      src="background_image.png"
+      alt=""
+      class="bg-center absolute top-0 left-0 right-0 h-screen w-screen -z-10"
+    />
+    <img
+      src="cruiser logo.png"
+      alt=""
+      class="w-[76px] h-[81px] absolute z-0 top-10 left-10 ml-10 mt-5"
+    />
+
+    <div
+      class="bg-white w-1/3 h-auto m-auto mt-14 flex flex-col items-center gap-10 py-10 text-lg"
+    >
+      <h1 class="text-slate-600 text-5xl font-bold">Your Ticket</h1>
+      <div class="flex">
+        <p class="font-['Roboto'] text-black font-normal">Ticket No: </p>
+        <p class="ml-2 font-thin">023891213</p>
+      </div>
+      <div class="w-96">
+        <div class="flex justify-between">
+          <p class="font-bold">Cruising from:</p>
+          <p id="cruising" class="font-extralight"></p>
+          <p class="font-bold">Cruising to:</p>
+          <p id="cruising_to" class="font-extralight"></p>
+        </div>
+        <div class="flex justify-between">
+          <p class="font-bold">Departure:</p>
+          <p id="deparcure" class="font-extralight"></p>
+          <p class="font-bold">Return:</p>
+          <p id="deparcure_return" class="font-extralight"></p>
+        </div>
+      </div>
+      <div class="flex w-96">
+        <div class="grid grid-cols-3 gap-6 mt-5">
+          <p class="font-bold">VIP:</p>
+          <p class="font-light">seats:01</p>
+          <p id="vip" class="w-40 font-light"></p>
+          <p class="font-bold">First class:</p>
+          <p class="font-light">seats:01</p>
+
+          <p id="first" class="w-40 font-light"></p>
+          <p class="font-bold">Economy:</p>
+          <p class="font-light">seats:02</p>
+
+          <p id="economy" class="w-40 font-light"></p>
+          <hr class="border-t-4 border-black w-80" />
+          <p></p>
+          <p></p>
+          <p class="font-bold">Total:</p>
+          <p id="total" class="ml-28 font-bold"></p>
+        </div>
+        <img
+          src="cruiser logo (1).png"
+          alt=""
+          class="flex flex-shrink-0 w-20 -mr-10 h-24 my-auto mb-24"
+        />
+      </div>
+      <button
+        id="print_ticket"
+        class="bg-red-500 flex py-3 px-40 text-white text-lg font-bold rounded-md"
+      >
+        Print the ticket
+      </button>
+      <p class="text-slate-600 text-8xl font-normal font-['Ruthie']">
+        Kings Cruiser
+      </p>
+    </div>
+  </body>
+</html>

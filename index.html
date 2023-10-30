@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    
+    /* Custom CSS to remove number input arrows */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="">
+    <img
+      src="background_image.png"
+      alt=""
+      class="bg-center absolute top-0 left-0 right-0 h-screen w-screen -z-10"
+    />
+    <img
+      src="cruiser logo.png"
+      alt=""
+      class="w-[76px] h-[81px] absolute z-0 top-10 left-10 ml-10 mt-5"
+    />
+    <div class="h-screen flex items-center " id="ecu was here">
+      <div class="container block sm:flex m-auto items-center gap-20 max-w-5xl" id="content-wrapper">
+        <div class="flex-1">
+          <h1 class="text-white text-8xl font-bold">Kings Cruiser</h1>
+          <p class="text-white text-sm font-bold mt-5">
+            Lorem Ipsum is simply dummy text of the printing and type setting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book
+          </p>
+        </div>
+        <div class="bg-white rounded-[10px] p-4 leading-10 ">
+          <h2 class="text-slate-600 text-lg font-bold">
+            Book some Ocean Time with Kings cruiser
+          </h2>
+          <div class="flex flex-col">
+            <label for="crusining_from">Cruising from:</label>
+            <select name="crusining_from" id="crusining_from" class="bg-slate-100 h-8">
+              <option value="" id="select">Select...</option>
+              <option value="Türkiye">Türkiye - İstanbul</option>
+              <option value="Fransa">Fransa - Paris</option>
+              <option value="İngiltere">İngiltere - Londra</option>
+              <option value="Almanya">Almanya - Berlin</option>
+              <option value="İtalya">İtalya - Roma</option>
+              <option value="Amerika">Amerika Birleşik Devletleri - New York</option>
+              <option value="Japonya">Japonya - Tokyo</option>
+              <option value="Brezilya">Brezilya - Rio de Janeiro</option>
+              <option value="Rusya">Rusya - Moskova</option>
+              <option value="Avustralya">Avustralya - Sydney</option>
+            </select>
+          </div>
+          <div class="flex flex-col">
+            <label for="crusining_to">Cruising to:</label>
+            <select name="crusining_to" id="crusining_to" class="bg-slate-100 h-8">
+              <option value="">Select...</option>
+              <option value="Türkiye">Türkiye - İstanbul</option>
+              <option value="Fransa">Fransa - Paris</option>
+              <option value="İngiltere">İngiltere - Londra</option>
+              <option value="Almanya">Almanya - Berlin</option>
+              <option value="İtalya">İtalya - Roma</option>
+              <option value="Amerika">Amerika Birleşik Devletleri - New York</option>
+              <option value="Japonya">Japonya - Tokyo</option>
+              <option value="Brezilya">Brezilya - Rio de Janeiro</option>
+              <option value="Rusya">Rusya - Moskova</option>
+              <option value="Avustralya">Avustralya - Sydney</option>
+            </select>
+          </div>
+          <div class="flex">
+            <div class="flex flex-col mr-5">
+              <label for="departure_date">Departure: </label>
+              <input
+                type="date"
+                name="departure_date"
+                id="departure_date"
+                class="bg-slate-100 h-10 w-52 p-2"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="return_date">Return: </label>
+              <input
+                type="date"
+                name="return_date"
+                id="return_date"
+                class="bg-slate-100 h-10 w-52 p-2"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <label for="vip_ticket">VIP ($7000) :</label>
+            <div class="flex justify-between">
+              <input
+                type="number"
+                name="vip_ticket"
+                id="vip_ticket"
+                class="bg-slate-100 h-10 w-80 p-2"
+                value="0"
+              />
+              <div>
+                <button id="increase-button-a">
+                  <img src="akar-icons_circle-plus-fill.png" alt="" />
+                </button>
+                <button id="decrease-button-a">
+                  <img src="akar-icons_circle-minus-fill.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <label for="first_class_ticket">First Class ($1500) :</label>
+            <div class="flex justify-between">
+              <input
+                type="number"
+                name="first_class_ticket"
+                id="first_class_ticket"
+                class="bg-slate-100 h-10 w-80 p-2"
+                value="0"
+              />
+              <div>
+                <button id="increase-button-b">
+                  <img src="akar-icons_circle-plus-fill.png" alt="" />
+                </button>
+                <button id="decrease-button-b">
+                  <img src="akar-icons_circle-minus-fill.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <label for="economy_ticket">Economy ($1000) :</label>
+            <div class="flex justify-between">
+              <input
+                type="number"
+                name="economy_ticket"
+                id="economy_ticket"
+                class="bg-slate-100 h-10 w-80"
+                value="0"
+              />
+              <div>
+                <button id="increase-button-c">
+                  <img src="akar-icons_circle-plus-fill.png" alt="" />
+                </button>
+                <button id="decrease-button-c">
+                  <img src="akar-icons_circle-minus-fill.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="flex justify-between text-black text-sm font-bold my-1">
+              <label for="subtotal">Subtotal</label>
+              <output name="result" for="subtotal" id="subtotal">$000</output
+              >
+            </div>
+            <div class="flex justify-between text-black text-sm font-bold my-1">
+              <label for="charge_10_vat">Charge 10%Vat</label>
+              <output name="result" for="charge_10_vat" id="charge_10_vat">$000</output
+              >
+            </div>
+            <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+            <div class="flex justify-between text-black text-sm font-bold my-1">
+              <label for="total">Total</label>
+              <output name="result" for="total" id="total">$000</output
+              >
+            </div>
+          </div>
+          <button
+            type="button" id="book_now" name="book_now"
+            class="bg-red-500 text-white text-lg font-bold w-full h-10 mt-3"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
